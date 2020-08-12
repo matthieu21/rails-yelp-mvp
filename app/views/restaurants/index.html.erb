@@ -1,0 +1,32 @@
+
+  <h1 class="mt-5 text-center">Restaurant</h1>
+
+  <table class="table table-striped mt-5 w-100">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Category</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @restaurants.each do |restaurant| %>
+        <tr>
+          <td><%= restaurant.name %></td>
+          <td><%= restaurant.address %></td>
+          <td><%= restaurant.category %></td>
+          <td><%= link_to 'Show', restaurant, class: 'btn btn-primary' %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New restaurant', new_restaurant_path, class: 'btn btn-primary' %>
+
+
+
+
+
